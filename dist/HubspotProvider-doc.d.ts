@@ -1,6 +1,18 @@
-declare const docs: {
-    get_info: {
-        desc: string;
+declare const _default: {
+    messages: {
+        get_info: {
+            desc: string;
+        };
+        save_company: {
+            desc: string;
+        };
+        load_company: {
+            desc: string;
+        };
+        list_company: {
+            desc: string;
+        };
     };
+    sections: {};
 };
-export default docs;
+export default _default;

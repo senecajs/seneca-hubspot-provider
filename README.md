@@ -74,22 +74,7 @@ $ npm install @seneca/hubspot-provider
 
 ## Options
 
-* `debug` : boolean <i><small>false</small></i>
-
-
-Set plugin options when loading with:
-```js
-
-
-seneca.use('hubspot-provider', { name: value, ... })
-
-
-```
-
-
-<small>Note: <code>foo.bar</code> in the list above means 
-<code>{ foo: { bar: ... } }</code></small> 
-
+*None.*
 
 
 <!--END:options-->
@@ -99,9 +84,10 @@ seneca.use('hubspot-provider', { name: value, ... })
 
 ## Action Patterns
 
-* [role:entity,base:hubspot,cmd:load,name:company,zone:provider](#-roleentitybasehubspotcmdloadnamecompanyzoneprovider-)
-* [role:entity,base:hubspot,cmd:save,name:company,zone:provider](#-roleentitybasehubspotcmdsavenamecompanyzoneprovider-)
-* [sys:provider,get:info,provider:hubspot](#-sysprovidergetinfoproviderhubspot-)
+* ["role":"entity","base":"hubspot","cmd":"list","name":"company","zone":"provider"](#-roleentitybasehubspotcmdlistnamecompanyzoneprovider-)
+* ["role":"entity","base":"hubspot","cmd":"load","name":"company","zone":"provider"](#-roleentitybasehubspotcmdloadnamecompanyzoneprovider-)
+* ["role":"entity","base":"hubspot","cmd":"save","name":"company","zone":"provider"](#-roleentitybasehubspotcmdsavenamecompanyzoneprovider-)
+* ["sys":"provider","get":"info","provider":"hubspot"](#-sysprovidergetinfoproviderhubspot-)
 
 
 <!--END:action-list-->
@@ -111,21 +97,28 @@ seneca.use('hubspot-provider', { name: value, ... })
 
 ## Action Descriptions
 
-### &laquo; `role:entity,base:hubspot,cmd:load,name:company,zone:provider` &raquo;
+### &laquo; `"role":"entity","base":"hubspot","cmd":"list","name":"company","zone":"provider"` &raquo;
 
-Load Hubspot company data into an entity.
-
-
-
-----------
-### &laquo; `role:entity,base:hubspot,cmd:save,name:company,zone:provider` &raquo;
-
-Update Hubspot company data from an entity.
+List Hubspot data into an entity.
 
 
 
 ----------
-### &laquo; `sys:provider,get:info,provider:hubspot` &raquo;
+### &laquo; `"role":"entity","base":"hubspot","cmd":"load","name":"company","zone":"provider"` &raquo;
+
+Load Hubspot data into an entity.
+
+
+
+----------
+### &laquo; `"role":"entity","base":"hubspot","cmd":"save","name":"company","zone":"provider"` &raquo;
+
+Update/Save Hubspot data into an entity
+
+
+
+----------
+### &laquo; `"sys":"provider","get":"info","provider":"hubspot"` &raquo;
 
 Get information about the provider.
 

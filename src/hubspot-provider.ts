@@ -35,7 +35,7 @@ function HubspotProvider(this: any, options : HubspotProviderOptions) {
 	    action: async function(this: any, entize: any, msg: any) {
 	      const limit = msg.q.limit$ || 10 // The maximum number of results to display per page
 	      let res = (await this.shared.sdk.crm.companies.basicApi.getPage(limit)).results
-	      let list = res.map((data) => entize(data))
+	      let list = res.map((data: any) => entize(data))
 	      return list
 	    }
 	  },
@@ -59,7 +59,7 @@ function HubspotProvider(this: any, options : HubspotProviderOptions) {
 	      try{
 	        obj = await this.shared.sdk.crm.companies.basicApi.update(id, {properties: {description: desc}})
 	      }
-	      catch(err){
+	      catch(err: any){
 	        if(err.code >= 400 && err.code < 500){
 		  return null
 	        }
