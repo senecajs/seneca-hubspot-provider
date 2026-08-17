@@ -1,27 +1,25 @@
-![Seneca Hubspot-Provider](http://senecajs.org/files/assets/seneca-logo.png)
+![Seneca](http://senecajs.org/files/assets/seneca-logo.png)
+> A [Seneca.js](http://senecajs.org) plugin
 
-> _Seneca Hubspot-Provider_ is a plugin for [Seneca](http://senecajs.org)
+# @seneca/hubspot-provider
 
-
-Provides access to the Hubspot API using the Seneca *provider*
-convention. Hubspot API entities are represented as Seneca entities so
-that they can be accessed using the Seneca entity API and messages.
-
-
-[![npm version](https://img.shields.io/npm/v/@seneca/trello-provider.svg)](https://npmjs.com/package/@seneca/trello-provider)
-[![build](https://github.com/senecajs/seneca-trello-provider/actions/workflows/build.yml/badge.svg)](https://github.com/senecajs/seneca-trello-provider/actions/workflows/build.yml)
-[![Coverage Status](https://coveralls.io/repos/github/senecajs/seneca-trello-provider/badge.svg?branch=main)](https://coveralls.io/github/senecajs/seneca-trello-provider?branch=main)
-[![Known Vulnerabilities](https://snyk.io/test/github/senecajs/seneca-trello-provider/badge.svg)](https://snyk.io/test/github/senecajs/seneca-trello-provider)
-[![DeepScan grade](https://deepscan.io/api/teams/5016/projects/19462/branches/505954/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=5016&pid=19462&bid=505954)
-[![Maintainability](https://api.codeclimate.com/v1/badges/f76e83896b731bb5d609/maintainability)](https://codeclimate.com/github/senecajs/seneca-trello-provider/maintainability)
-
+[![build](https://github.com/senecajs/seneca-hubspot-provider/actions/workflows/build.yml/badge.svg)](https://github.com/senecajs/seneca-hubspot-provider/actions/workflows/build.yml)
+[![Known Vulnerabilities](https://snyk.io/test/github/senecajs/seneca-hubspot-provider/badge.svg)](https://snyk.io/test/github/senecajs/seneca-hubspot-provider)
 
 | ![Voxgig](https://www.voxgig.com/res/img/vgt01r.png) | This open source module is sponsored and supported by [Voxgig](https://www.voxgig.com). |
 |---|---|
 
+## Install
+
+```sh
+$ npm install @seneca/hubspot-provider
+```
+
+
+
+<!--START:options-->
 
 ## Quick Example
-
 
 ```js
 
@@ -61,18 +59,25 @@ Console.log('UPDATED DATA', companyId)
 
 ```
 
-## Install
+## More Examples
 
-```sh
-$ npm install @seneca/hubspot-provider
-```
+See [test/](test/) for more usage examples.
 
+## Motivation
 
+A [Seneca.js](http://senecajs.org) plugin.
 
-<!--START:options-->
+## Support
 
+If you're using this module and need help, you can:
 
-## Options
+- Post a [github issue](https://github.com/senecajs/seneca-hubspot-provider/issues)
+- Tweet to [@senecajs](http://twitter.com/senecajs)
+- Ask on the [Gitter](https://gitter.im/senecajs/seneca)
+
+## API
+
+### Options
 
 *None.*
 
@@ -81,8 +86,7 @@ $ npm install @seneca/hubspot-provider
 
 <!--START:action-list-->
 
-
-## Action Patterns
+### Action Patterns
 
 * ["role":"entity","base":"hubspot","cmd":"list","name":"company","zone":"provider"](#-roleentitybasehubspotcmdlistnamecompanyzoneprovider-)
 * ["role":"entity","base":"hubspot","cmd":"load","name":"company","zone":"provider"](#-roleentitybasehubspotcmdloadnamecompanyzoneprovider-)
@@ -94,8 +98,7 @@ $ npm install @seneca/hubspot-provider
 
 <!--START:action-desc-->
 
-
-## Action Descriptions
+### Action Descriptions
 
 ### &laquo; `"role":"entity","base":"hubspot","cmd":"list","name":"company","zone":"provider"` &raquo;
 
@@ -128,3 +131,17 @@ Get information about the provider.
 
 
 <!--END:action-desc-->
+
+## Contributing
+
+The [Senecajs org](https://github.com/senecajs/) encourages open participation. If you feel you can help in any way, be it with documentation, examples, extra testing, or new features please get in touch.
+
+### Running tests
+
+```sh
+npm run test
+```
+
+## Background
+
+Part of the [Senecajs org](https://github.com/senecajs/).
